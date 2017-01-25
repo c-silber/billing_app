@@ -1,16 +1,15 @@
 {% extends "restrack/base.html" %}
 
-{% block sidebar %}{% endblock %}
-
 {% block content %}
-
-	<ol class="breadcrumb" style="background-color: #ffffff !important;">
-	  <li><a href="#">Home</a></li>
-	  <li><a href="#">{{ facility.facility_name }}</a></li>
-	  <li class="active">Residents</li>
-	</ol>
 	
-	<div class="container">
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		
+		<ol class="breadcrumb" style="background-color: #ffffff !important;">
+		  <li><a href="/restrack/">Home</a></li>
+		  <li><a href="/restrack/{{ facility.id }}/facility/">{{ facility.facility_name }}</a></li>
+		  <li class="active">Residents</li>
+		</ol>
+		
 		<h1 align="center">Residents [{{ facility.facility_name }}]</h1>
 		
 		<div class="input-group">

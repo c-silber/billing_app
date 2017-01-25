@@ -23,7 +23,7 @@
 		<tbody>
 			{% for facility in facility %}
 			<tr>
-				<td>{{ facility.facility_name }} </td>
+				<td><a href="/restrack/{{ facility.id }}/facility/"> {{ facility.facility_name }} </a></td>
 			</tr>
 			{% endfor %}
 		</tbody>
