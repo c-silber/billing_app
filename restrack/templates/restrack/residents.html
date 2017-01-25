@@ -1,0 +1,55 @@
+{% extends "restrack/base.html" %}
+
+{% block sidebar %}{% endblock %}
+
+{% block content %}
+
+	<ol class="breadcrumb" style="background-color: #ffffff !important;">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">{{ facility.facility_name }}</a></li>
+	  <li class="active">Residents</li>
+	</ol>
+	
+	<div class="container">
+		<h1 align="center">Residents [{{ facility.facility_name }}]</h1>
+		
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search...">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">Go!</button>
+			</span>
+		</div><!-- /input-group -->
+		
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th data-field="facility_name">Id</th>
+					<th data-field="facility_name">Name</th>
+					<th data-field="facility_name">Admission Date</th>
+					<th data-field="facility_name">Discharge Date</th>
+					<th data-field="facility_name">Payer Source</th>
+					<th data-field="facility_name">Bed Number</th>
+					<th data-field="facility_name">Social Security</th>
+					<th data-field="facility_name">Flag</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for resident in residents %}
+				<tr>
+					<td>{{ resident.id }} </td>
+					<td>{{ resident.first_name }} {{ resident.last_name }}</td>
+					<td>{{ resident.admission_date }}</td>
+					<td>{{ resident.discharge_date }}</td>
+					<td>{{ resident.payer_source}}</td>
+					<td>{{ resident.bed_number }}</td>
+					<td>{{ resident.social_security }}</td>
+					<td>{{ resident.flag }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		
+	</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "restrack/base.html" %}
+
+{% block content %}
+
+	{% block sidebar %}{% endblock %}
+
+	<div class="container">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search...">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">Go!</button>
+			</span>
+		</div><!-- /input-group -->
+
+
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th data-field="facility_name">Name</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{% for facility in facility %}
+			<tr>
+				<td>{{ facility.facility_name }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+		
+	</div>
+
+{% endblock %}
