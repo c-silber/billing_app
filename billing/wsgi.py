@@ -7,15 +7,12 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 """
 
-import os, sys
+import os
 
-sys.path.append('/billing/restrack')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "billing.settings")
 
-from django.core.wsgi import get_wsgi_application
+import django.core.wsgi
 from whitenoise.django import DjangoWhiteNoise
-
-
 
 from dj_static import Cling
 
