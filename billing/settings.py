@@ -26,7 +26,7 @@ SECRET_KEY = '2sk2@z7&+=qj4&h4rdeizkuu67ad=a_m@9569y%-+_%y&!gg6)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://bill-restrack.herokuapp.com/', '127.0.0.1']
 
 # Application definition
 
